@@ -1,0 +1,10 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+    {% for category in category %}
+        {{ category.slug }}
+    {% endfor %}
+{% endblock %}

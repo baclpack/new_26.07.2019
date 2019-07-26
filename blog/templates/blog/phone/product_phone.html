@@ -1,0 +1,12 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+    {% for product_phone in product_phone %}
+        {{ product_phone.title }}
+        {{ product_phone.slug }}
+        <img src="{{ product_phone.image.url }}" alt="">
+    {% endfor %}
+{% endblock %}

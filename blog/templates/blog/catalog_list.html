@@ -1,0 +1,10 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+    {% for catalog in catalog %}
+        <img src="{{ catalog.image.url }}" width="200" height="170" alt="">
+    {% endfor %}
+{% endblock %}
