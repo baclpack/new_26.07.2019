@@ -1,0 +1,16 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+    {% for category in catalog.category_phone_catalog.all %}
+        {{ category.title }}
+    {% endfor %}
+    {% for product in catalog.catalog_product_phone.all %}
+        {{ product.title }}
+    {% endfor %}
+    {% for product in catalog.catalog_product_a_laptop.all %}
+        {{ product.title }}
+    {% endfor %}
+{% endblock %}

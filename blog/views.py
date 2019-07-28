@@ -9,6 +9,13 @@ def catalog_list(request):
     }
     return render(request, 'blog/catalog_list.html', context)
 
+def catalog_detail(request, slug):
+    catalog = Catalog.objects.get(slug__iexact=slug)
+    context = {
+        'catalog': catalog,
+    }
+    return render(request, 'blog/catalog_detail.html', context)
+
 
 def category_phone_list(request):
     category_phone = Category_Phone.objects.all()

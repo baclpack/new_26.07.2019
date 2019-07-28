@@ -5,6 +5,8 @@
 
 {% block content %}
     {% for catalog in catalog %}
-        <img src="{{ catalog.image.url }}" width="200" height="170" alt="">
+        <a href="{{ catalog.get_absolute_url }}">
+            <img src="{{ catalog.image.url }}" width="400" height="390" alt="">
+        </a>
     {% endfor %}
 {% endblock %}
